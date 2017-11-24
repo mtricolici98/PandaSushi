@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drawFrame">
+    <ImageView
+        android:id="@+id/drawImage"
+        android:layout_width="185dp"
+        android:layout_height="185dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:src="@drawable/unghiset"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="100 Lei"
+            android:textColor="#000"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:textSize="19dp"
+            android:id="@+id/drawPrice"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drawPrice"
+            android:layout_gravity="bottom"
+            android:text="Set Sugun"
+            android:textColor="#ffa359"
+            android:textStyle="bold"
+            android:id="@+id/drawName"/>
+
+    </FrameLayout>
+    <Button
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawFrame"
+        android:id="@+id/addToCart"
+        android:text="To Cart"/>
+
+
+
+</RelativeLayout>
