@@ -20,6 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
+import java.util.Observable;
 
 /**
  * Created by mariu on 11/14/2017.
@@ -49,7 +50,6 @@ public class DishList {
             dishes.add(dish);
         }
         public void loadItems(String name, int price, String cat, String descrption) {
-
             database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("dishlist");
 
@@ -63,15 +63,16 @@ public class DishList {
         database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("dishlist");
         Log.d("OBJECTNAME", "TRYING");
+
         myRef.addChildEventListener(new ChildEventListener() {
                                         @Override
                                         public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-                                            Log.d("OBJECtNAME", String.valueOf(dataSnapshot.getKey()));
+
                                             Dish o = dataSnapshot.getValue(Dish.class);
-                                            Log.d("OBJECtNAME", "worked for" + String.valueOf(dataSnapshot.getKey()));
+                                            
 
                                             dishes.add(o);
-
+                                       
                                             Log.d("objinfo",o.getresName()+" "+o.getCategory()+" "+o.getPrice()+" " +o.getDescription());
                                         }
 

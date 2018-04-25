@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <ImageView
+
         android:id="@+id/pupupimage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/unghiset"
+        android:layout_weight="2"
+        android:cropToPadding="true"
+        android:adjustViewBounds="true"
+        android:src="@drawable/sakemaki"
 
-         />
+        />
 
     <TextView
         android:id="@+id/popuptext"
         android:layout_marginLeft="10dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="0dp"
         android:text="SOMETEXT HERE"
         android:textColor="@color/colorPrimary"
         android:textSize="20dp"
+        android:layout_weight="0.3"
         android:textStyle="bold"
         android:layout_below="@+id/pupupimage"
          />
@@ -30,12 +36,12 @@
         android:layout_marginLeft="10dp"
         android:id="@+id/popupdesc"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="0dp"
         android:textSize="18dp"
         android:text="SOMETEXT HERE"
-
+        android:layout_weight="2"
         android:layout_below="@+id/popuptext"
         />
 
-</RelativeLayout>
+</LinearLayout>

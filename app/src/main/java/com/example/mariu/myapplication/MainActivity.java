@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.content.Intent;
+import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -29,59 +30,52 @@ private DrawerLayout mDrawerLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         DishList.getInstance().reloadItems();
+        setContentView(R.layout.activity_main);
+
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        b = (ImageButton) findViewById(R.id.imageButton1);
-        b1 = (ImageButton) findViewById(R.id.imageButton2);
-        b2 = (ImageButton) findViewById(R.id.imageButton3);
-        b3 = (ImageButton) findViewById(R.id.imageButton4);
-        b4 = (ImageButton) findViewById(R.id.imageButton5);
-        b5 = (ImageButton) findViewById(R.id.imageButton6);
-        b.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                init("all");
-            }
-        });
+        LinearLayout b1 = (LinearLayout) findViewById(R.id.catmaki);
+        LinearLayout b2 = (LinearLayout) findViewById(R.id.catrole);
+        LinearLayout b3 = (LinearLayout) findViewById(R.id.catsalate);
+        LinearLayout b4 = (LinearLayout) findViewById(R.id.catset);
+        LinearLayout b5 = (LinearLayout) findViewById(R.id.catng);
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 init("maki");
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 init("role");
             }
         });
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                init("ng");
+            public void onClick(View view) {
+                init("salata");
             }
         });
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 init("set");
             }
         });
-
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-               init("salate");
+            public void onClick(View view) {
+                init("ng");
             }
         });
         setNavigationViewListner();
-    }
+}
 
     public boolean onCreateOptionsMenu(Menu menu){
         //getMenuInflater().inflate(R.menu.menu_nav, menu);

@@ -8,20 +8,26 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:id="@+id/firstLL">
+        android:id="@+id/firstLL"
+        >
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Nume"
-            android:textSize="30dp"/>
+            android:autoSizeTextType="uniform"
+            android:gravity="center"
+
+            />
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="3"
-            android:id="@+id/delivery_name"/>
+            android:layout_weight="4"
+            android:id="@+id/delivery_name"
+            android:maxLines="1"
+            android:inputType="text"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,17 +36,20 @@
         android:layout_below="@id/firstLL">
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Adresa"
-            android:textSize="30dp"/>
+            android:gravity="center"
+           />
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="3"
-            android:id="@+id/delivery_address"/>
+            android:layout_weight="4"
+            android:id="@+id/delivery_address"
+            android:maxLines="1"
+            android:inputType="text"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -49,17 +58,20 @@
         android:layout_below="@id/secondLL">
 
         <TextView
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:text="Numar Telefon"
-            android:textSize="18dp"/>
+            android:autoSizeTextType="uniform"
+            android:gravity="center"/>
 
         <EditText
             android:layout_width="0dp"
             android:layout_height="50dp"
-            android:layout_weight="3"
-            android:id="@+id/delivery_phone"/>
+            android:layout_weight="4"
+            android:id="@+id/delivery_phone"
+            android:maxLines="1"
+            android:inputType="phone"/>
     </LinearLayout>
     <Button
         android:id="@+id/delivery_confirm"

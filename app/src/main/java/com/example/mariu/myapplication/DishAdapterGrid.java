@@ -58,7 +58,7 @@ public View getView(int position, View convertView, ViewGroup parent){
             btn.setText(R.string.addedtocart);
 
             } else {
-                Toast.makeText(context,"ALREADY IN CART",Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Deja In Cos",Toast.LENGTH_SHORT).show();
             }
         Log.d("object","addedToCart");
         }

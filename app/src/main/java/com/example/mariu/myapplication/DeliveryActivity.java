@@ -3,6 +3,7 @@ package com.example.mariu.myapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,13 +16,15 @@ public class DeliveryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Checkout");
         final EditText name,adress,phone;
         final String type = getIntent().getStringExtra("type");
         name = (EditText) findViewById(R.id.delivery_name);
         adress = (EditText) findViewById(R.id.delivery_address);
         phone = (EditText) findViewById(R.id.delivery_phone);
-        final SharedPreferences prefs = this.getSharedPreferences("PandaSushiSharedPrefs", Context.MODE_PRIVATE);
+        final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         final SharedPreferences.Editor editor = prefs.edit();
         name.setText(prefs.getString("name",""));
         adress.setText(prefs.getString("adress",""));
@@ -37,5 +40,9 @@ public class DeliveryActivity extends AppCompatActivity {
             startActivity(n);
             }
         });
+    }
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
     }
 }

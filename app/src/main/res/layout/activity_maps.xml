@@ -1,11 +1,68 @@
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFCDD2"
+    android:background="#FFFFFF"
     >
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:background="@drawable/buttonbg"
+    >
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+
+        android:layout_weight="3"
+
+
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/mainlogo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Orele De Lucru"
+        android:textColor="#FFFFFF"
+        android:gravity="center|bottom"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Luni-Joi,Duminica: 10:00-23:00"
+        android:textColor="#FFFFFF"
+        android:gravity="center|bottom"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Vineri-Sambata: 10:00-00:00"
+        android:textColor="#FFFFFF"
+        android:gravity="center|top"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Telefon Contact: +373 60 760 750"
+        android:textColor="#FFFFFF"
+        android:gravity="center|top"
+        />
+
+</LinearLayout>
 
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
@@ -13,40 +70,11 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="397dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
 
-        map:layout_constraintBottom_toBottomOf="parent"
         tools:context="com.example.sergi.aboutus.MapsActivity"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="333dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Panda Sushi este livrarea de mâncăruri japoneze la Chișinău. Echipa noastră constă din profesioniști,care își iubesc lucru."
-        android:textColor="#000000"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/map"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="14dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="338dp"
-        android:layout_height="65dp"
-        android:layout_marginBottom="8dp"
-        android:text="Adresa: Bulevardul Moscovei 20,Chishinau
-                   Numarul de telefon: +37360760750
-                              Ore de lucru: Luni-Vineri 10:00-22:00
-                                     &#160;                        Sambata-Duminica 10:00-23:00"
-        app:layout_constraintBottom_toTopOf="@+id/map"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="11dp" />
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

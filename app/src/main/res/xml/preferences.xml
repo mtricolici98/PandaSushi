@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <com.example.mariu.myapplication.EditTextPreference
+        android:defaultValue=" "
+        android:key="name"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Nume"
+        />
+    <com.example.mariu.myapplication.EditTextPreference
+        android:defaultValue=" "
+        android:key="adress"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Adresa" />
+    <com.example.mariu.myapplication.EditTextPreference
+        android:defaultValue=" "
+        android:key="phone"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Numar Telefon"
+        />
+    <!--<ListPreference-->
+        <!--android:defaultValue="1"-->
+        <!--android:entries="@array/languages"-->
+        <!--android:entryValues="@array/languages"-->
+        <!--android:key="list_preference_1"-->
+        <!--android:title="Limba" />-->
+
+</PreferenceScreen>

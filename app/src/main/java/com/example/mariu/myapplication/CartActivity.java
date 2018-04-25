@@ -52,55 +52,61 @@ public class CartActivity extends AppCompatActivity implements NavigationView.On
         n.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                final Dialog dialog = new Dialog(CartActivity.this);
-                dialog.setContentView(R.layout.checkout_dialog);
-                getLayoutInflater().inflate(R.layout.checkout_dialog,null);
-                dialog.setTitle("This is my custom dialog box");
-                dialog.setCancelable(true);
 
-                // there are a lot of settings, for dialog, check them all out!
-                // set up radiobutton
-                final RadioButton rd1 = (RadioButton) dialog.findViewById(R.id.rd_1);
-                final RadioButton rd2 = (RadioButton) dialog.findViewById(R.id.rd_2);
-                rd1.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        rd2.setChecked(false);
-                    }
-                });
-                rd2.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        rd1.setChecked(false);
-                    }
-                });
-                Button btnOk = (Button) dialog.findViewById(R.id.dialogOk);
-                btnOk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        if(rd2.isChecked()){
-                            Intent n = new Intent(CartActivity.this,DeliveryActivity.class);
-                            n.putExtra("type","delivery");
-                            CartActivity.this.finish();
-                            startActivity(n);
-                        } else {
-                            Intent n = new Intent(CartActivity.this,DeliveryActivity.class);
-                            n.putExtra("type","pickup");
-                            CartActivity.this.finish();
-                            startActivity(n);
+                if (cart.size() != 0) {
+                    final Dialog dialog = new Dialog(CartActivity.this);
+                    dialog.setContentView(R.layout.checkout_dialog);
+                    getLayoutInflater().inflate(R.layout.checkout_dialog, null);
+                    dialog.setTitle("This is my custom dialog box");
+                    dialog.setCancelable(true);
+
+                    // there are a lot of settings, for dialog, check them all out!
+                    // set up radiobutton
+                    final RadioButton rd1 = (RadioButton) dialog.findViewById(R.id.rd_1);
+                    final RadioButton rd2 = (RadioButton) dialog.findViewById(R.id.rd_2);
+                    rd1.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rd2.setChecked(false);
                         }
-                    }
-                });
-                Button btnCancel = (Button) dialog.findViewById(R.id.dialogCancel);
-                btnCancel.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        dialog.cancel();
-                    }
-                });
-                // now that the dialog is set up, it's time to show it
-                dialog.show();
+                    });
+                    rd2.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            rd1.setChecked(false);
+                        }
+                    });
+                    Button btnOk = (Button) dialog.findViewById(R.id.dialogOk);
+                    btnOk.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            if (rd2.isChecked()) {
+                                Intent n = new Intent(CartActivity.this, DeliveryActivity.class);
+                                n.putExtra("type", "delivery");
+                                CartActivity.this.finish();
+                                startActivity(n);
+                            } else {
+                                Intent n = new Intent(CartActivity.this, DeliveryActivity.class);
+                                n.putExtra("type", "pickup");
+                                CartActivity.this.finish();
+                                startActivity(n);
+                            }
+                        }
+                    });
+                    Button btnCancel = (Button) dialog.findViewById(R.id.dialogCancel);
+                    btnCancel.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            dialog.cancel();
+                        }
+                    });
+                    // now that the dialog is set up, it's time to show it
+                    dialog.show();
 
+                } else
+                {
+                    Toast.makeText(CartActivity.this,"Nimic in cos", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

@@ -13,82 +13,183 @@
     android:orientation="vertical"
     android:layout_height="wrap_content">
 
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/catmaki"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/buttonbg"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_makisvg"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Maki"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/catrole"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:orientation="vertical"
+            android:clickable="true"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_role"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Role"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/catsalate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:background="@drawable/buttonbg"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_salads"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Salate"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/catset"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttonbg"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_seturi"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Seturi"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         >
 
-        <ImageButton
-            android:scaleType="fitCenter"
-            android:id="@+id/imageButton1"
-            android:layout_width="0dp"
-            android:layout_height="185dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/catall"
-            android:adjustViewBounds="true"
-            />
 
-    <ImageButton
+        <LinearLayout
+            android:id="@+id/catng"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
-        android:layout_gravity="center"
-        android:id="@+id/imageButton2"
-        android:layout_width="0dp"
-        android:layout_height="185dp"
-        android:layout_weight="1"
-        android:background="@drawable/catmaki"/>
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/catsalate"
+            android:background="@drawable/buttonbg"
+
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:src="@drawable/ic_ng"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="Nighiril/Gunkane"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="30dp"
+                android:textColor="#FFFFFF"
+                />
+
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-        <ImageButton
-
-            android:layout_gravity="center"
-            android:id="@+id/imageButton3"
-            android:layout_width="0dp"
-            android:layout_height="185dp"
-            android:layout_weight="1"
-            android:background="@drawable/catrole"
-            android:adjustViewBounds="true"/>
-
-        <ImageButton
-
-            android:layout_gravity="center"
-            android:id="@+id/imageButton4"
-            android:layout_width="0dp"
-            android:layout_height="185dp"
-            android:layout_weight="1"
-            android:background="@drawable/catnighiril" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-
-        android:layout_weight="1">
-        <ImageButton
-
-            android:layout_gravity="center"
-            android:id="@+id/imageButton5"
-            android:layout_width="0dp"
-            android:layout_height="185dp"
-            android:layout_weight="1"
-            android:background="@drawable/catseturi" />
-
-        <ImageButton
-
-            android:layout_gravity="center"
-            android:id="@+id/imageButton6"
-            android:layout_width="0dp"
-            android:layout_height="185dp"
-            android:layout_weight="1"
-            android:background="@drawable/catsalate" />
-    </LinearLayout>
-
 </LinearLayout>
 
 

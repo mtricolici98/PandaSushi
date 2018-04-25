@@ -13,6 +13,7 @@ public class Order {
     private ArrayList<CartItem> cartItems;
     private String adress;
     private String phonenr;
+    private boolean done;
 
     public String getType() {
         return type;
@@ -33,6 +34,15 @@ public class Order {
         this.adress=adress;
         this.phonenr=phonenr;
         this.type=type;
+        done = false;
+    }
+
+    public void done(){
+        done = true;
+    }
+
+    public boolean getDone(){
+        return done;
     }
     public String getAdress() {
         return adress;

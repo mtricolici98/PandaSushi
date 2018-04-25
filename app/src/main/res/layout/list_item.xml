@@ -6,34 +6,45 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/drawFrame">
+        android:id="@+id/drawFrame"
+        android:background="@drawable/buttonbg"
+        >
     <ImageView
         android:id="@+id/drawImage"
         android:layout_width="185dp"
-        android:layout_height="185dp"
+        android:layout_height="120dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:src="@drawable/unghiset"/>
+        android:src="@drawable/sakemaki"/>
 
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="100 Lei"
-            android:textColor="#000"
-            android:layout_gravity="bottom"
-            android:gravity="right"
-            android:textSize="19dp"
-            android:id="@+id/drawPrice"/>
-        <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/drawPrice"
+            android:text="100 Lei"
+            android:textColor="#FFFFFF"
+            android:layout_gravity="bottom|right"
+            android:gravity="right"
+            android:autoSizeTextType="uniform"
+            android:id="@+id/drawPrice"
+            android:background="#80000000"
+            />
+
+        <TextView
+            android:id="@+id/drawName"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addToCart"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="bottom"
+            android:autoSizeTextType="uniform"
             android:text="Set Sugun"
-            android:textColor="#ffa359"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:id="@+id/drawName"/>
+            android:autoSizeMaxTextSize="10dp"
+            android:background="#80000000"
+            />
 
     </FrameLayout>
     <Button
@@ -41,7 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/drawFrame"
         android:id="@+id/addToCart"
-        android:text="To Cart"/>
+        android:text="To Cart"
+        android:textColor="#ffff"
+        android:background="@drawable/buttonbg"
+        />
 
 
 

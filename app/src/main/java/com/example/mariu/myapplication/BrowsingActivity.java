@@ -19,6 +19,9 @@ import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.Observable;
+import java.util.Observer;
+
 public class BrowsingActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
@@ -27,6 +30,7 @@ public class BrowsingActivity extends AppCompatActivity implements NavigationVie
     private Button b,s;
     private DishList dishlist;
     private GridView gridView;
+    public DishAdapterGrid dishAdapter;
     private TextView name, category, price, description,resid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +46,10 @@ public class BrowsingActivity extends AppCompatActivity implements NavigationVie
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
         gridView = (GridView) findViewById(R.id.gridView);
         String cat = getIntent().getStringExtra("category");
 
-        DishAdapterGrid dishAdapter;
+
         dishAdapter= new DishAdapterGrid(this, dishlist.getList(cat));
         Log.d("BUGGG", Integer.toString(dishlist.getList().size()));
         //ListView listView = (ListView) findViewById(R.id.listView);
@@ -88,6 +91,7 @@ public class BrowsingActivity extends AppCompatActivity implements NavigationVie
 
             case R.id.MARIUS: {
                 goHome(); mDrawerLayout.closeDrawers();
+                finish();
                 break;
             }
             case R.id.settings: {
@@ -132,4 +136,6 @@ public class BrowsingActivity extends AppCompatActivity implements NavigationVie
         Intent i = new Intent(this, MapsActivity.class);
         startActivity(i);
     }
+
+
 }
